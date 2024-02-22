@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+
+
     <section class="container">
       <h1>The Final Showdown</h1>
       <p>
@@ -14,78 +16,117 @@
         stand before Malakar's lair. The dark sorcerer awaits, the Crystal of
         Wisdom in his grasp. It's time to make your move.
       </p>
-      <!-- Your Code -->
+      
       <p>
         Your choice here will determine the fate of the kingdom. Choose wisely.
       </p>
 
-      <fieldset>
-        <form action="page7.html" id="path" type="submit">
-          <label for="path">How will you confront Malakar?</label>
-          <label for="path" style="display: flex">Choose Wisely</label>
+      <form action="page7.html" id="path" type="submit">
+      <!--How will you confront Malakar-->
+      <fieldset style="border: 2px red solid">
+        <legend><strong>How will you confront Malakar?</strong></legend>
+        
+          <label for="path">Choose Wisely</label>
           <select id="pathChoice" name="pathChoice" required>
             <option value="">--Please choose an option--</option>
 
-            <!--PathOfBattle-->
-            <option value="PathOfBattle" id="PathOfBattle">
-              Path Of Battle
-            </option>
-
-            <!--PathOfStealth-->
-            <option value="PathOfStealth" id="PathOfStealth">
-              Path Of Stealth
-            </option>
-
-            <input
-              type="submit"
-              id="submitButton"
-              value="Continue on Your Journey"
-            />
-          </select>
-        </form>
-      </fieldset>
-
-
-
-
-      <fieldset>
-        <form action="page7.html" id="path" type="submit">
-
-            <section>
-          <label for="path">How will you confront Malakar?</label>
-          <label for="path" style="display: flex">Choose Wisely</label>
-          <select id="pathChoice" name="pathChoice" required>
-            <option value="">--Please choose an option--</option>
-
-            <!--PathOfBattle-->
-            <option value="PathOfBattle" id="PathOfBattle">
-              Path Of Battle
-            </option>
-            </section>
             
-            <!--PathOfStealth-->
+            <option value="PathOfBattle" id="PathOfBattle">
+              Path Of Battle
+            </option>
+
+            
             <option value="PathOfStealth" id="PathOfStealth">
               Path Of Stealth
             </option>
 
-            <input
-              type="submit"
-              id="submitButton"
-              value="Continue on Your Journey"
-            />
+            
           </select>
-        </form>
+       
+      </fieldset>
+
+
+      <!--Character Information-->
+      <fieldset style="border: 2px red solid">
+        <legend><strong>character Information</strong></legend>
+
+
+
+        <!--The Brave-->
+        <fieldset>
+          <legend><strong>The Brave</strong></legend>
+         
+          <label for="name">Your Name:</label>
+          <input type="text" id="name" name="name" placeholder="name" />
+        
+      </fieldset>
+
+
+
+       <!--Select Your Weapon-->
+       <fieldset>
+        <legend><strong>Select Your Weapon</strong></legend>
+        
+        <!--Sword-->
+        <input type="radio" id="Sword" name="weapon" value="Sword">
+        <label for="Sword">Sword</label>
+
+        <!--Bow-->
+        <input type="radio" id="Bow" name="weapon" value="Bow">
+        <label for="Bow">Bow</label><br>
+
+        <!--Staff-->
+        <input type="radio" id="Staff" name="weapon" value="Staff">
+        <label for="Staff">Staff</label><br>
+        
       </fieldset>
 
 
 
 
 
+      <!--Select Your Armor-->
+      <fieldset>
+        <legend><strong>Your Armor</strong></legend>
+        
+        <!--Plate Armor-->
+        <input type="checkbox" id="Plate Armor" name="armor" value="Plate Armor">
+        <label for="Plate Armor">Plate Armor</label>
+        
+
+        <!--Leather Armor-->
+        <input type="checkbox" id="Leather Armor" name="armor" value="Leather Armor">
+        <label for="Leather Armor"> Leather Armor</label>
+        
+
+        <!--cloak-->
+        <input type="checkbox" id="cloak" name="armor" value="cloak">
+        <label for="cloak">cloak</label>
+        
+
+      </fieldset>
 
 
 
 
+       <!--Leave a Nessage for Malikar-->
+       
+       <legend><strong>Message for Malikar</strong></legend>
+       
+        <input type="text" id="message" name="message" placeholder="Message" style="height: 75px; width: 350px;" />
+    
+      
+       
+      </fieldset>
 
+
+
+      <input
+              type="submit"
+              id="submitButton"
+              value="Face Malakar"
+            />
+    </form>
     </section>
   </body>
 </html>

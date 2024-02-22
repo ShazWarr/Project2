@@ -23,13 +23,7 @@
       <form action="page5.html" id="characterForm" type="get">
         <fieldset>
           <label for="riddle1">Your Answer</label><br />
-          <input
-            type="text"
-            id="riddle1"
-            name="riddle1"
-            placeholder="I am an echo"
-            value="I am an echo"
-          />
+          <input type="text" id="riddle1" name="riddle1" placeholder="echo" />
 
           <input
             type="submit"
@@ -43,23 +37,21 @@
     <script>
       let submitButton = document.getElementById("submitButton");
       let riddleAnswer = document.getElementById("riddle1");
-      riddleAnswer.addEventListener(
-        "click",
-        function (correctAnswer, answerInput) {
-          const correctAnswer = "I am an echo";
-          const answerInput = riddleAnswer.value;
 
-          if (correctAnswer.toLowerCase() === answerInput.toLowerCase()) {
-            //if true
-            submitButton.style.color = "white";
-            submitButton.style.backgroundColor = "green";
-          } else {
-            //if false
-            submitButton.style.color = "white";
-            submitButton.style.backgroundColor = "red";
-          }
+      riddleAnswer.addEventListener("input", function () {
+        const correctAnswer = "echo";
+        const answerInput = riddleAnswer.value.toLowerCase();
+
+        if (correctAnswer.toLowerCase() === answerInput) {
+          //if true
+          submitButton.style.color = "white";
+          submitButton.style.backgroundColor = "green";
+        } else {
+          //if false
+          submitButton.style.color = "white";
+          submitButton.style.backgroundColor = "red";
         }
-      );
+      });
     </script>
   </body>
 </html>

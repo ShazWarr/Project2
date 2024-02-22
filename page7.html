@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Final Showdown</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <form action="welcome.html" id="feedback" type="get">
+        <h1>Your Quest Has Concluded</h1>
+        <p>
+          Based on your choices, [Insert a dynamic conclusion based on the
+          user's journey and final decision]. The kingdom will remember your
+          deeds for generations to come.
+        </p>
+        <p>
+          We hope you enjoyed your adventure. Would you like to provide feedback
+          on your experience?
+        </p>
+
+        <fieldset
+          style="display: flex; flex-direction: column; align-items: center"
+        >
+          <legend><strong>Your Feedback:</strong></legend>
+          <input
+            type="text"
+            id="message"
+            name="message"
+            placeholder="Enter Your Feedback Here"
+            style="height: 75px; width: 350px"
+          />
+          <input type="submit" id="submitButton" value="Submit Feedback" />
+
+          <input type="submit" id="submitButton2" value="PlayAgain" />
+        </fieldset>
+      </form>
+    </section>
+
+  </body>
+</html>
