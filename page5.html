@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Journey Continues</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <h1>The Journey Continues</h1>
+      <p>
+        With the guardian's riddle behind you, the path forward splits into
+        three. Each route is known to favor certain traits: strength, wisdom, or
+        stealth. Choose your path wisely, as it will influence the challenges
+        you face ahead.
+      </p>
+      <form action="page6.html" id="path" type="submit">
+        <label for="path">Choose your path</label>
+
+        <select id="pathChoice" name="pathChoice" required>
+          <option value="">--Please choose an option--</option>
+
+          <!--PathOfBattle-->
+          <option value="PathOfBattle" id="PathOfBattle">Path Of Battle</option>
+
+          <!--PathOfStealth-->
+          <option value="PathOfStealth" id="PathOfStealth">
+            Path Of Stealth
+          </option>
+
+          <input
+            type="submit"
+            id="submitButton"
+            value="Continue on Your Journey"
+          />
+        </select>
+      </form>
+      <p>
+        Your choice will not only test your abilities but also reveal deeper
+        truths about your character.
+      </p>
+    </section>
+
+    <script>
+      document
+        .getElementById("pathChoice")
+        .addEventListener("change", function () {
+          let pathChoice = document.getElementById("pathChoice").value;
+          let body = document.getElementsByTagName("body")[0];
+
+          if (pathChoice === "PathOfBattle") {
+            body.style.backgroundColor = "green";
+          } else {
+            body.style.backgroundColor = "white";
+          }
+        });
+
+      document
+        .getElementById("submitButton")
+        .addEventListener("click", function () {
+          let pathChoice = document.getElementById("pathChoice").value;
+          let redirect = document.getElementById("path");
+
+          if (pathChoice === "PathOfStealth") {
+            redirect.action = "page5b.html";
+          }
+        });
+    </script>
+  </body>
+</html>
